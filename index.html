@@ -8,41 +8,69 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Attendance Management System</title>
 </head>
-<body class=" h-fit flex items-center justify-center ">
+<body class=" h-fit flex items-center justify-center relative ">
 
         <!-- Container -->
-        <div class="container h-[100vh] bg-white max-w-screen-lg h-fit flex flex-col shadow-lg shadow-gray-400 md:h-[90dvh] relative fli " >
-            <div class="loginCard w-full flex items-center justify-center rounded-md ">
+        <div class="container h-[100vh] bg-white max-w-screen-lg h-fit flex flex-col shadow-lg shadow-gray-400 md:h-[90dvh] relative " >
+            <div class="loginCard w-full h-full flex items-center justify-center rounded-md relative">
 
                 <!-- Main Login Form -->
-                <div class="loginDetails w-4/5 h-full flex flex-col md:w-1/2 justify-around ">
+                <div class="loginDetails w-[95%] h-full flex flex-col md:w-1/2 justify-around relative">
 
-                    <div class="items-center flex flex-col justify-center logo h-[20%]"><img src="assets/logo.png" alt="logo" class="w-[30%]"></div>
-                    <form action="" method="post" class="flex flex-col items-left justify-center w-4/5 mx-auto gap-3 text-[1rem] md:w-3/5">
-                        <h2 class="text-xl font-bold">Welcome Back!!</h2>
-                        <h5>Enter your details</h5>
-                        <div class="inputFields my-5 flex flex-col gap-3 mb-3">
-                            <h5 class="text-sm">Email</h5>
-                            <input type="text" placeholder="Enter your Email" class="outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
-                            <h5 class="text-sm">Password</h5>
-                            <input type="password" placeholder="Enter your Password" class=" outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
-                            <div class="wrongPasswordPrompt font-bold text-red-500 text-sm hidden">X Invalid Username/Password</div>
+                    <!-- Teacher Login Section -->
+                    <div class="teacherLogin w-full h-full flex flex-col justify-center items-center absolute">
+                        <div class="items-center flex flex-col justify-center logo h-[10%] ">
+                            <img src="assets/logo.png" alt="logo" class="w-[30%]">
                         </div>
-                        <div class="flex justify-between text-sm md:text-sm">
+                        <form action="" method="post" class="flex flex-col items-left justify-center w-4/5 mx-auto gap-3 text-[1rem] md:w-3/5">
+                            <h2 class="text-xl font-bold">Welcome Back!!</h2>
+                            <h5>Enter your details</h5>
+                            <div class="inputFields my-3 flex flex-col gap-3 ">
+                                <h5 class="text-sm">Email</h5>
+                                <input type="text" placeholder="Enter your Email" class="outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
+                                <h5 class="text-sm">Password</h5>
+                                <input type="password" placeholder="Enter your Password" class=" outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
+                                <div class="wrongPasswordPrompt font-bold text-red-500 text-sm hidden">X Invalid Username/Password</div>
+                            </div>
+                            <button class="w-full rounded-md bg-[#633fbc] py-[1.2vh] hover:bg-[#691fbc]">Login</button>
+                            <button class="w-full rounded-md py-[1.2vh] border-2 border-[#bdb9c8] flex items-center justify-center">
+                                <img src="assets/googleLogo.png" alt="Google Logo" class="w-[8%]">
+                                <p>Signup with Google</p>
+                            </button>
+                        </form>
+                        <div class="flex justify-between text-sm md:text-sm w-4/5 md:w-3/5 mt-4">
                             <div><input type="checkbox" class="px-0 mx-0 "> Remember Me</div>
-                            <button class="forgotPassword text-[#633fbc]">Forgot Password?</button>
+                            <button class="forgotPasswordButton text-[#633fbc]">Forgot Password?</button>
                         </div>
-                        <button class="w-full rounded-md bg-[#633fbc] py-[1.2vh] hover:bg-[#691fbc]">Login</button>
-                        <button class="w-full rounded-md py-[1.2vh] border-2 border-[#bdb9c8] flex items-center justify-center">
-                            <img src="assets/googleLogo.png" alt="Google Logo" class="w-[8%]">
-                            <p>Signup with Google</p>
-                        </button>
-                        <button class="loginSignupSwitch text-left">New to AMS? Switch to Signup</button>
-                    </form>
-                    
-                </div>
+                        <button class="my-2 signupSwitch ">New to AMS? Switch to Signup</button> 
+                        <button class="studentToggle my-2 text-[#633fbc] text-[1rem] font-bold">Student Login</button> 
+                    </div>
+                
+                    <!-- Student login section -->
+                    <div class="studentLogin w-full h-full flex flex-col my-auto items-center justify-center">
+                        <div class="items-center flex flex-col justify-center logo h-[10%] ">
+                            <img src="assets/logo.png" alt="logo" class="w-[30%]">
+                        </div>
+                        <form action="" method="get" class="flex flex-col items-left justify-center w-4/5 mx-auto gap-3 text-[1rem] md:w-3/5">
+                            <h2 class="text-xl font-bold">Welcome Back!!</h2>
+                            <h5>Enter your details</h5>
+                            <div class="inputFields my-3 flex flex-col gap-3 ">
+                                <h5 class="text-sm">Name</h5>
+                                <input type="text" placeholder="Enter your name" class="name outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
+                                <h5 class="text-sm">Roll No</h5>
+                                <input type="text" placeholder="Enter your roll-no" class="rollNo outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
+                                <h5 class="text-sm">Class</h5>
+                                <input type="number" placeholder="Enter your class" class="class outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]" min="1" max="12">
+                                <div class="wrongPasswordPrompt font-bold text-red-500 text-sm hidden">X Invalid Name/RollNo/Class combo</div>
+                            </div>
+                            <button class="w-full rounded-md bg-[#633fbc] py-[1.2vh] hover:bg-[#691fbc]">Search</button>
+                        </form>
+                        <button class="teacherToggle my-2 text-[#633fbc] text-[1rem] font-bold">Teacher Login</button>
+                    </div>
 
-                <!-- Sun Section -->
+                </div> 
+
+                <!-- Sun Section Front -->
                 <div class="loginGraphics h-full w-1/2 hidden md:block md:relative">
                     <div class="loginGraphicsUpperHalf relative h-1/2 ">
                         <div class="sun relative"></div>
@@ -50,12 +78,12 @@
                     <div class="loginGraphicsLowerHalf z-[3] h-1/2 backdrop-blur-md relative "></div>
                 </div>
 
-            </div>
+            </div><!-- End of Front side -->
 
-            <!-- Signup Card -->
-            <div class="signupCard w-full h-full flex items-center justify-center rounded-md absolute">
+            <!-- Signup Card  AKA backside-->
+            <div class="signupCard w-full h-full flex items-center justify-center rounded-md absolute ">
 
-                <!-- Sun Section -->
+                <!-- Sun Section Back-->
                 <div class="loginGraphics h-full w-1/2 hidden md:block md:relative">
                     <div class="loginGraphicsUpperHalf relative h-1/2 ">
                         <div class="sun"></div>
@@ -64,10 +92,10 @@
                 </div>
 
                 <!-- Main Signup Form -->
-                <div class="signupDetails w-4/5 h-[100%] flex flex-col md:w-1/2 justify-around items-right ">
-                    <div class="items-center flex flex-col justify-center logo h-[20%]"><img src="assets/logo.png" alt="logo" class="w-[30%] h-[70%"> </div>
+                <div class="signupDetails md:w-1/2 flex flex-col w-[95%] h-full justify-center items-right ">
+                    <div class="items-center flex justify-center logo h-[20%]"><img src="assets/logo.png" alt="logo" class="w-[30%]"> </div>
                     <form action="" method="post" class="flex flex-col items-left justify-center w-4/5 mx-auto gap-3 text-[1rem] md:w-3/5">
-                        <h2 class="text-xl font-bold">Welcome Back!!</h2>
+                        <h2 class="text-xl font-bold">Welcome Aboard!!</h2>
                         <h5>Enter your details</h5>
                         <div class="inputFields my-5 flex flex-col gap-3 mb-3">
                             <h5 class="text-sm">Email</h5>
@@ -85,11 +113,34 @@
                             <img src="assets/googleLogo.png" alt="Google Logo" class="w-[8%]">
                             <p>Signup with Google</p>
                         </button>
-                        <button class="loginSignupSwitch text-left">New to AMS? Switch to Signup</button>
                     </form>
+                    <button class="loginSwitch">Already a user? Login now</button>
+                    
                 </div>
             </div>
         </div>
+    
+    <!-- Forgot Password Section -->
+    <div class="forgotPasswordSection absolute w-[90%] md:w-2/5 h-1/2 bg-slate-400/40 z-[4] transparent backdrop-blur-md rounded-md flex flex-col justify-center items-center gap-3 shrink">
+        <button class="forgotPasswordSectionCloseButton absolute right-5 top-5 hover:scale-125">X</button>
+        <div class="text-xl font-bold text-purple-700">Forgot Password Section</div>
+        <div>Enter your AMS registered Mobile Number</div>
+        <form action="" method="post" class="flex flex-col items-left justify-center gap-4 w-3/5">
+            <div class="text-center">Mobile Number</div>
+            <div class="flex gap-3">
+                <input type="text" placeholder="Enter valid mobile no" min="6300000000" max="9999999999" class="forgotPasswordMobileNumber outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
+                <button class="getOTPButton w-full rounded-md bg-[#633fbc] py-[1.2vh] hover:bg-[#691fbc]">Get OTP</button>
+            </div>
+        </form>
+        <form action="" class="flex flex-col items-center justify-center gap-3 w-3/5">
+            <div class="flex flex-row gap-3 justify-center items-center w-full">
+                <input type="text" placeholder="Enter new password" class="outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc] w-[48%]">
+                <input type="password" placeholder="Repeat new password" class="outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc] w-[48%]">
+            </div> 
+            <button class="resetPasswordButton rounded-md bg-[#633fbc] py-[1.2vh] hover:bg-[#691fbc] w-3/5">Reset Password</button>        
+        </form>
+    </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>

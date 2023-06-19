@@ -33,10 +33,10 @@ body::before{
     background-color:#f3f5f9;
     z-index:1;
     width: 100%;
-    height: 99%;
+    height: 100%;
 }
 
-.loginCard{
+.loginCard , .loginCard > .loginDetails >.teacherLogin {
     backface-visibility: hidden;
 }
 
@@ -46,8 +46,25 @@ body::before{
 	transform-style: preserve-3d;
 	transition: 0.8s;
 }
+.unflip{
+    transform: rotateY(360deg);
+	transform-style: preserve-3d;
+	transition: 0.8s;
+}
 
-.signupCard{
+.signupCard, .loginCard > .loginDetails> .studentLogin{
     backface-visibility: hidden;  
     transform: rotateY(180deg);
+}
+
+.shrink{
+    height: 0%;
+	transform-style: preserve-3d;
+	transition: 0.8s;
+}
+
+.enlarge{
+    height: 100%;
+	transform-style: preserve-3d;
+	transition: 0.8s;
 }
