@@ -11,13 +11,13 @@
 <body class=" h-fit flex items-center justify-center ">
 
         <!-- Container -->
-        <div class="container h-[100vh] bg-white max-w-screen-lg h-fit flex flex-col shadow-lg shadow-gray-400 md:h-[90dvh]" >
-            <div class="loginCard w-full flex items-center justify-center rounded-md">
+        <div class="container h-[100vh] bg-white max-w-screen-lg h-fit flex flex-col shadow-lg shadow-gray-400 md:h-[90dvh] relative fli " >
+            <div class="loginCard w-full flex items-center justify-center rounded-md ">
 
                 <!-- Main Login Form -->
-                <div class="loginDetails w-4/5 h-full flex flex-col md:w-1/2 justify-around">
+                <div class="loginDetails w-4/5 h-full flex flex-col md:w-1/2 justify-around ">
 
-                    <div class="items-center flex flex-col justify-center logo h-[20%]"><img src="assets/logo.png" alt="logo" class="w-[30%] h-[70%"></div>
+                    <div class="items-center flex flex-col justify-center logo h-[20%]"><img src="assets/logo.png" alt="logo" class="w-[30%]"></div>
                     <form action="" method="post" class="flex flex-col items-left justify-center w-4/5 mx-auto gap-3 text-[1rem] md:w-3/5">
                         <h2 class="text-xl font-bold">Welcome Back!!</h2>
                         <h5>Enter your details</h5>
@@ -44,12 +44,50 @@
 
                 <!-- Sun Section -->
                 <div class="loginGraphics h-full w-1/2 hidden md:block md:relative">
-                        <div class="loginGraphicsUpperHalf relative h-1/2 ">
-                            <div class="sun relative"></div>
-                        </div>
-                        <div class="loginGraphicsLowerHalf z-[3] h-1/2 relative backdrop-blur-md"></div>
+                    <div class="loginGraphicsUpperHalf relative h-1/2 ">
+                        <div class="sun relative"></div>
+                    </div>
+                    <div class="loginGraphicsLowerHalf z-[3] h-1/2 backdrop-blur-md relative "></div>
                 </div>
 
+            </div>
+
+            <!-- Signup Card -->
+            <div class="signupCard w-full h-full flex items-center justify-center rounded-md absolute">
+
+                <!-- Sun Section -->
+                <div class="loginGraphics h-full w-1/2 hidden md:block md:relative">
+                    <div class="loginGraphicsUpperHalf relative h-1/2 ">
+                        <div class="sun"></div>
+                    </div>
+                    <div class="loginGraphicsLowerHalf z-[3] h-1/2 backdrop-blur-md blur-md relative"></div>
+                </div>
+
+                <!-- Main Signup Form -->
+                <div class="signupDetails w-4/5 h-[100%] flex flex-col md:w-1/2 justify-around items-right ">
+                    <div class="items-center flex flex-col justify-center logo h-[20%]"><img src="assets/logo.png" alt="logo" class="w-[30%] h-[70%"> </div>
+                    <form action="" method="post" class="flex flex-col items-left justify-center w-4/5 mx-auto gap-3 text-[1rem] md:w-3/5">
+                        <h2 class="text-xl font-bold">Welcome Back!!</h2>
+                        <h5>Enter your details</h5>
+                        <div class="inputFields my-5 flex flex-col gap-3 mb-3">
+                            <h5 class="text-sm">Email</h5>
+                            <input type="text" placeholder="Enter your Email" class="outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
+                            <h5 class="text-sm">Password</h5>
+                            <input type="password" placeholder="Enter your Password" class=" outline-none border-2 rounded-md pl-3 py-2 focus:border-[#633fbc]">
+                            <div class="wrongPasswordPrompt font-bold text-red-500 text-sm hidden">X Invalid Username/Password</div>
+                        </div>
+                        <div class="flex justify-between text-sm md:text-sm">
+                            <div><input type="checkbox" class="px-0 mx-0 "> Remember Me</div>
+                            <button class="forgotPassword text-[#633fbc]">Forgot Password?</button>
+                        </div>
+                        <button class="w-full rounded-md bg-[#633fbc] py-[1.2vh] hover:bg-[#691fbc]">Login</button>
+                        <button class="w-full rounded-md py-[1.2vh] border-2 border-[#bdb9c8] flex items-center justify-center">
+                            <img src="assets/googleLogo.png" alt="Google Logo" class="w-[8%]">
+                            <p>Signup with Google</p>
+                        </button>
+                        <button class="loginSignupSwitch text-left">New to AMS? Switch to Signup</button>
+                    </form>
+                </div>
             </div>
         </div>
     <script src="js/index.js"></script>

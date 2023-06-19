@@ -36,9 +36,18 @@ body::before{
     height: 99%;
 }
 
+.loginCard{
+    backface-visibility: hidden;
+}
+
 
 .flip{
     transform: rotateY(180deg);
 	transform-style: preserve-3d;
 	transition: 0.8s;
+}
+
+.signupCard{
+    backface-visibility: hidden;  
+    transform: rotateY(180deg);
 }

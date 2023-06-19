@@ -1,6 +1,6 @@
-let toggleLoginSignup = document.querySelector('.loginSignupSwitch');
+let loginSignupToggle = document.querySelectorAll('.loginSignupSwitch');
 let container = document.querySelector('.container');
 
-toggleLoginSignup.addEventListener('click', ()=>{
+loginSignupToggle.addEventListener('click' , ()=>{
     container.classList.toggle('flip');
-});
+})
